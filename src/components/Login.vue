@@ -59,20 +59,22 @@ export default {
             },
             login(){
                 var that = this;
-                this.$refs.loginFormRef.validate(async (valid)=>{
-                    //console.log(valid);
-                    //进行验证登录
-                    if(!valid) return;
-                    const {data} =  await this.axios.post('login', that.loginForm);
-                        console.log(data);
-                        //console.log(that);
-                         that.$message({
-                            message: '登陆成功',
-                            type: 'success'
-                            });
-                        window.sessionStorage.setItem('token',"abcdefghijklmnopqrstuvwxyz");
-                        that.$router.push('/home');                                        
-                });
+                // this.$refs.loginFormRef.validate(async (valid)=>{
+                //     //console.log(valid);
+                //     //进行验证登录
+                //     if(!valid) return;
+                //     const {data} =  await this.axios.post('login', that.loginForm);
+                //         console.log(data);
+                //         //console.log(that);
+                //          that.$message({
+                //             message: '登陆成功',
+                //             type: 'success'
+                //             });
+                //         window.sessionStorage.setItem('token',"abcdefghijklmnopqrstuvwxyz");
+                //         that.$router.push('/home');                                        
+                // });
+                window.sessionStorage.setItem('token',"abcdefghijklmnopqrstuvwxyz");
+                that.$router.push('/geneIndex'); 
             }
         }
 }
