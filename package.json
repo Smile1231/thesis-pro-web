@@ -13,6 +13,7 @@
     "echarts": "^5.0.2",
     "element-ui": "^2.4.5",
     "miniprogram-api-typings": "^2.4.1",
+    "qs": "^6.10.3",
     "vue": "^2.6.11",
     "vue-amap": "^0.5.10",
     "vue-axios": "^3.2.4",

@@ -1,24 +1,7 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Login from '../components/Login.vue'
-import Home from '../components/Home.vue'
 import axios from 'axios'
-import Welcome from '../components/Welcome.vue'
-import Users from '../components/user/Users.vue'
-import Rights from '../components/power/Rights.vue'
-import Roles from '../components/power/Roles.vue'
-import Params  from "../components/goods/Params.vue"
-import Add from '../components/goods/Add.vue'
-import Report from '../components/report/Report.vue'
-
-
-import Teacher from '../components/teacher/Teachers.vue'
-
-import SwiperItems from '../components/swiperItems/swiperItems.vue'
-
-import Course from '../components/course/Course.vue'
-
-import UserInfo from '../components/user/UserInfo.vue'
 
 import GeneIndex from '../components/gene/GeneIndex.vue'
 
@@ -26,7 +9,7 @@ import GeneIndex from '../components/gene/GeneIndex.vue'
 //接口基础地址
 // axios.defaults.baseURL = 'http://www.ysqorz.top:8888/api/private/v1/'
 
-// axios.defaults.baseURL = 'http://localhost:9999/'
+axios.defaults.baseURL = 'http://localhost:9999/'
 
 //Vue.prototype.$http = axios
 
@@ -53,55 +36,11 @@ const routes = [
   },
   {
     path: '/login',
-    component: Login
+    component: GeneIndex
   },
   {
     path: '/geneIndex',
     component: GeneIndex
-  },
-  {
-    path: '/home',
-    component: Home,
-    redirect: '/welcome',
-    children:[
-      {
-      path: '/welcome',
-      component: Welcome
-      },
-      {
-        path: '/users',
-        component: UserInfo
-      },
-      {
-        path: '/rights',
-        component: Rights
-      },
-      {
-        path: '/roles',
-        component: Roles
-      },
-      {
-        path: '/category',
-        component: Params
-      },
-      {
-        path: '/goods',
-        component: Add
-      },
-      {
-        path: '/reports',
-        component: Report
-      },{
-        path: '/teachers',
-        component: Teacher
-      },{
-        path: '/swiperItems',
-        component: SwiperItems
-      },{
-        path: '/course',
-        component: Course
-      }
-  ]
   },
 ]
 
