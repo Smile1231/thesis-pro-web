@@ -9,8 +9,9 @@ import GeneIndex from '../components/gene/GeneIndex.vue'
 //接口基础地址
 // axios.defaults.baseURL = 'http://www.ysqorz.top:8888/api/private/v1/'
 
-axios.defaults.baseURL = 'http://localhost:9999/'
-
+// axios.defaults.baseURL = 'http://58.198.178.163:9999/api'
+axios.defaults.baseURL = 'http://localhost:9999/api'
+// axios.defaults.baseURL = '/api'
 //Vue.prototype.$http = axios
 
 // 在request 拦截器中, 展示进度条 NProgress.start()
@@ -27,7 +28,6 @@ axios.defaults.baseURL = 'http://localhost:9999/'
 // })
 
 Vue.use(VueRouter)
-
 
 const routes = [
   {

@@ -32,7 +32,7 @@
     <div class="line"></div>
     <div class="gene_body">
       <div class="font_style">
-        <h2>BE-Analyzer</h2>
+        <h2>BABE（Batch Analyzer for Base Editor）</h2>
         <h3>
           A JavaScript-based instant assessment tool for NGS data of CRISPR base
           edited cells.
@@ -297,7 +297,8 @@ export default {
         },
       ],
       select: "",
-      uploadUrl: "http://localhost:9999/upload/uploadFile",
+      // uploadUrl: "/api/upload/uploadFile",
+      uploadUrl: "http://localhost:9999/api/upload/uploadFile",
       acceptGZ: ".gz",
       acceptXLSX: ".xlsx",
       //文件上传列表
